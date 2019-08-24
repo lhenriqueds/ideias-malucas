@@ -1,0 +1,45 @@
+{% extends 'shared/layout.html' %}
+{% block conteudo %}
+
+<h1>Ideias Malucas</h1>
+{% if pessoa is None %}
+    <h1>Ops, você precisa se cadastrar ou realizar o login</h1>
+    <p class="ideias">
+        <a class ="botao1" type="submit" value="Cadastrar Ideia" href="/">clique aqui para se cadastrar</a>  
+        <label class="labe" for=""></label>
+         <input class ="botao1" type="submit" value="Login" onclick="Enviar1()" >     
+    </p>
+        
+  
+{% else %}
+
+<section>
+<form class = "formideias" action="/ideias" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="email" value="{{pessoa.email}}">
+    <h2 class="corcadastreideia">Cadastre a sua ideia {{pessoa.nome}}</h2>
+    <label class="labe" for="descricao">Titulo da sua ideia</label>
+    <input class = "campo" type="text" name="titulo" >
+    <label class="labe" for="descricao">Descreva sua ideia</label>
+    <textarea class = "campo" name="descricao" cols="30" rows="10">
+    </textarea>
+
+    <label class="labe" for="categorias">Categorias</label>
+    <select id='op' class="campo" name='categorias'>      
+           <option value="OUTROS">Outros</option>
+           <option value="TERRA_PLANA">Terra Plana</option>
+           <option value="CONTRA_GROGER">Contra o coach Groger</option>
+           <option value="CONTRA_JOAO">Contra João</option>
+           <option value="PUBLICAS">Públicas</option>
+           
+       </select>
+       <label class="labe" for=""></label>
+   <div id="campooutros">
+        <input class = "campo" type="text" name="categoria_outros" placeholder="Caso outros, qual? ">
+   </div>
+       <label class="labe" for=""></label>
+       <input class ="botao"  type="submit" value="Cadastrar Ideia" >
+</form>
+</section>
+{% endif %}
+{% endblock %}

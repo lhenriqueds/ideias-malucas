@@ -1,0 +1,186 @@
+body{
+    background-color: #036;
+    margin: 0;
+
+}
+h1{
+    color: rgb(219, 158, 44);
+    font-size: 40px;              
+    font-family: 'Francois One', sans-serif;
+    text-align: center;
+}  
+h2{
+    color: #036;
+    font-size: 20px;              
+    font-family: 'Francois One', sans-serif;
+    text-align: center;
+    margin: 0;
+}  
+section{
+    justify-content: center;
+    display: flex;
+}
+.formindex{
+    background-color:rgb(219, 158, 44);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color:#036;
+    font-weight:bold;
+    display: flex;
+    flex-direction: column;  
+    width: 400px;
+    height: 650px;
+    justify-content: center;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.campo{
+    background-color: #f5f6fae1;
+    border: 1px solid rgba(255, 255, 255, .1);
+    padding: 10px 10px 10px 10px;
+    border-radius: 20px;
+    color: #8795a2;
+    width: 300px;
+}
+
+.labe{
+    padding-top: 10px;
+}
+
+.botao{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 23px;
+    background: #036;
+    cursor: pointer;
+    outline: none;
+    padding: 15px;
+    position: relative; top: 20px;
+    font-family: 'Francois One', sans-serif;
+    width: 300px;
+}
+.formlogin{
+    background-color:rgb(219, 158, 44);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color:#036;
+    font-weight:bold;
+    display: flex;
+    flex-direction: column;  
+    width: 400px;
+    height: 300px;
+    justify-content: center;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.formideias{
+    background-color:rgb(219, 158, 44);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color:#036; 
+    font-weight:bold;
+    display: flex;
+    flex-direction: column;  
+    width: 400px;
+    height: 520px;
+    justify-content: center;
+    border-radius: 25px;
+    align-items: center;
+}
+.corcadastreideia{
+    color:#036; 
+}
+.botao1{
+    color:036;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 23px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    padding: 15px;
+    position: relative; top: 20px;
+    font-family: 'Francois One', sans-serif;
+    width: 300px;
+}
+p{
+    text-align: center;
+}
+
+.divlistagem{
+    background-color:rgb(219, 158, 44);
+    font-family: 'Francois One', sans-serif;
+    font-size: 16px;
+    color:white; 
+    border-radius: 25px;
+    width: 70%;
+    height: 10%;
+    margin: 0px 10px 10px 0;   
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.secsobre{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+}
+
+.navsobre{
+    background-color:rgb(219, 158, 44);
+    height: 50px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Francois One', sans-serif;
+    border-radius: 250px;
+    color: #036;
+ }
+
+ .botao:hover{
+    color:rgb(219, 158, 44);
+}
+
+.ideias{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.botao2{
+    color: #036;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 23px;
+    background: rgb(219, 158, 44);
+    cursor: pointer;
+    outline: none;
+    padding: 5px;
+    font-family: 'Francois One', sans-serif;
+    
+
+}
+.botao2:hover{
+    color:white;
+
+}
+.ideias{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}

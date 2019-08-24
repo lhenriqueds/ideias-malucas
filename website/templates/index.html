@@ -1,0 +1,39 @@
+{% extends 'shared/layout.html' %}
+{% block conteudo %}
+
+<h1>Ideias Malucas</h1>
+
+{{msg}}
+<section>
+<form class = "formindex"action="/" method="post">
+    {% csrf_token %}
+    <h2>Cadastre-se</h2>
+    <label class="labe" >Nome</label>
+    <input class = "campo" type="text" name="nome" required>
+
+    <label class="labe" >Sobrenome</label>
+    <input class = "campo" type="text" name="sobrenome" required>
+
+    <label class="labe" >E-mail</label>
+    <input class = "campo" type="email" name="email" required>
+
+    <label class="labe" for="genero">Genero</label>
+    <select class = "campo" name="genero">
+        <option value="F">Feminino</option>
+        <option value="M">Masculino</option>
+        <option value="O">Outro</option>
+    </select>
+
+    <label class="labe" for="">Biografia</label>
+    <textarea class = "campo" name="biografia" cols="30" rows="10">
+    </textarea>
+
+    <input class ="botao" type="submit" value="Cadastrar">
+    <label class="labe" for=""></label>
+    <div id="btn">
+    <input class ="botao" type="submit" value="Login" onclick="Enviar1()" >
+    </div>
+    
+</form>
+</section>
+{% endblock %}

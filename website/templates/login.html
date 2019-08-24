@@ -1,0 +1,16 @@
+{% extends 'shared/layout.html' %}
+
+{% block conteudo %}
+
+<h1>Login</h1>
+<p>{{msg}}</p>
+<section>
+<form class = "formlogin" action="/login" method="post">
+    {% csrf_token %}
+    <h2>Digite seu E-mail para realizar o login</h2>
+    <label class="labe" for=""></label>
+    <input class = "campo" type="email" name="email" placeholder="E-mail">
+    <input class ="botao" type="submit" value="Enviar">
+</form>
+</section>
+{% endblock %}

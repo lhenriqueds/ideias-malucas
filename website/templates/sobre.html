@@ -1,0 +1,41 @@
+{% extends 'shared/layout.html' %}
+
+{% block conteudo %}
+
+
+<h1>Listagem das Ideas</h1>
+
+<section class="secsobre">
+        <div class="navsobre">
+        <form action="/sobre" method="post">
+        {% csrf_token %}
+        <select class="botao2" name="categorias">                      
+        <option value="TERRA_PLANA">Terra Plana</option>
+        <option value="CONTRA_GROGER">Contra o coach Groger</option>
+        <option value="CONTRA_JOAO">Contra João</option>
+        <option value="PUBLICAS">Públicas</option>
+        <option value="OUTROS">Outros</option>
+        </select>
+        <input class="botao2"type="submit" value="Buscar">
+        </form>
+        </div>
+
+        <p>
+
+        {% for ideia in ideias %}
+        {%if ideia.pessoa.ativo == True%}
+        <div class="divlistagem">
+        <p>Nome: {{ideia.pessoa.nome}} {{ideia.pessoa.sobrenome}}</p>           
+        <p>Titulo da Ideia: {{ideia.titulo}}</p>
+        <p>Categoria: {{ideia.categorias}}</p>              
+        <p>Descrição: {{ideia.descricao}}</p>
+      <a href="/remover_ideia/{{ideia.id}}" > <input class ="botao2" type="submit" value="Remover"> </a>
+        </div>
+        {%endif%}
+        {% endfor %}
+
+        </p>
+{% endblock %}
+</section>
+        return redirect('/sobre')
+        return render (request, 'sobre.html',{'msg': 'Ops, deu ruim'})
